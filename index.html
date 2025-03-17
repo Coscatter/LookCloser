@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
@@ -48,24 +51,42 @@
 
 
   <section class="hero">
-    <div class="hero-body">
+    <div class="hero-body"  style="background: linear-gradient(to bottom, #cafaff96, #f3f3eb00);">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">LookCloser: Frequency-aware Radiance Field for Tiny-Detail Scene</h1>
+            <h1 class="title is-1 publication-title">LookCloser<span class="emoji">🔍</span>: Frequency-aware Radiance Field for Tiny-Detail Scene</h1>
+            
+            <div class="is-size-5 cvpr-line">
+              <span><strong class="cvpr-title">CVPR 2025</strong></span>
+            </div>
+
+            
+            
+            
+            
+            
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://coscatter.github.io/XiaoyuZhang/" target="_blank">Xiaoyu Zhang</a><sup>*</sup><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://coscatter.github.io/LookCloser/" target="_blank">Weihong Pan</a><sup>*</sup><sup>2</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://coscatter.github.io/LookCloser/" target="_blank">Chong Bao<sup>2</sup></a>,</span>
+                    <span class="author-block">
+                      <a href="https://coscatter.github.io/LookCloser/" target="_blank">Xiyu Zhang</a>,</span>
+                      <span class="author-block">
+                        <a href="https://coscatter.github.io/LookCloser/" target="_blank">Xiaojun Xiang</a>,</span>
+                        <span class="author-block">
+                          <a href="https://coscatter.github.io/LookCloser/" target="_blank">Hanqing Jiang</a>,</span>
+                          <span class="author-block">
+                            <a href="https://coscatter.github.io/LookCloser/" target="_blank">Hujun Bao</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block"><sup>1</sup>SenseTime Research,  <sup>2</sup>Zhejiang University 
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -82,8 +103,19 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
+
+                    <!-- ArXiv abstract Link -->
                     <span class="link-block">
+                        <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                    </span>
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,7 +123,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -104,16 +136,17 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <i class="fa-solid fa-database" style="font-size: 30px;" ></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Dataset</span>
                 </a>
               </span>
+
+
             </div>
           </div>
         </div>
@@ -123,79 +156,211 @@
 </section>
 
 
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body" >
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item">
+          <!-- Video 1 -->
+          <video controls autoplay loop muted>
+            <source src="static/videos/2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="item">
+          <!-- Video 2 -->
+          <video controls autoplay loop muted>
+            <source src="static/videos/1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="item">
+          <!-- Video 3 -->
+          <video controls autoplay loop muted>
+            <source src="static/videos/4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="item">
+          <!-- Video 2 -->
+          <video controls autoplay loop muted>
+            <source src="static/videos/5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+
+
+<!-- 加载 Bulma Carousel -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    bulmaCarousel.attach('#results-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      navigation: true,
+      pagination: true,
+      loop: true,  // 设置轮播循环
+    });
+
+    // 增大轮播按钮
+    document.querySelectorAll('.carousel-nav span').forEach(button => {
+      button.style.fontSize = '300px'; // 增大按钮
+      button.style.padding = '50px'; // 增加按钮点击区域
+    });
+  });
+</script>
+
+<!-- 自定义 CSS，增大按钮 -->
+<style>
+  .html {
+    --iron-icon-height: 150px !important; /* 增大图标高度 */
+    --iron-icon-width: 150px !important;  /* 增大图标宽度 */
+}
+
+  .carousel-nav {
+    font-size: 300px !important; /* 增大切换按钮 */
+  }
+  .carousel-nav span {
+    width: 5% !important;
+    height: 150px !important;
+    line-height: 150px !important;
+  }
+  video {
+    width: 100%;
+    height: 70vh;  
+    max-height: 700px; /* 限制视频高度 */
+    border-radius: 10px; /* 让视频边角更圆滑 */
+  }
+  video::-webkit-media-controls-fullscreen-button {
+    display: none !important;  /* 隐藏全屏按钮 */
+  }
+  
+  video::-webkit-media-controls {
+    display: none !important;  /* 隐藏整个控制栏 */
+  }
+  .has-text-centered, .hero-body {
+    margin-bottom: 0 !important;  /* 去掉所有容器的外边距 */
+    padding-bottom: 0 !important; /* 去掉所有容器的内边距 */
+  }
+  .emoji {
+    font-size: 1.2em;  /* 调整 emoji 大小 */
+    vertical-align: bottom;  /* 让它与文字对齐 */
+    margin-left: 4px;  /* 增加与文本的间距 */
+  }
+
+  .cvpr-title {
+    font-size: 1.2em;  /* 调整大小 */
+    font-weight: bold;  /* 保持加粗 */
+    color: #000000a2 !important;
+  }
+
+
+/* 增大按钮 */
+.button {
+  font-size: 10px;  /* 增大按钮文字大小 */
+  padding: 15px 30px;  /* 增加按钮的内边距，让按钮更大 */
+  height: 40px;  /* 增大按钮高度 */
+  width: auto;   /* 让按钮宽度根据内容自动调整 */
+}
+
+/* 增大图标 */
+.button .icon {
+  font-size: 30px;  /* 调整图标的大小，可以根据需要调整 */
+  margin-right: 0px; /* 增加图标与文本之间的间距 */
+}
+</style>
+
+
+
+<!-- Paper abstract with PDF -->
+<section class="section hero is-light" >
+  <div class="container is-max-desktop">
+
+    <!-- Abstract 文字部分 -->
+    <div class="has-text-left">
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p style="font-size: 1.0em; margin: 0 auto;">
+          &nbsp;&nbsp;&nbsp;&nbsp;<strong>Humans</strong> perceive and comprehend their surroundings through information spanning multiple frequencies. In immersive scenes, people naturally scan their environment to grasp its overall structure while examining fine details of objects that capture their attention. However, current NeRF frameworks primarily focus on modeling either high-frequency local views or the broad structure of scenes with low-frequency information, limited to balance both. We introduce <strong>FA-NeRF</strong>, a novel frequency-aware framework for view synthesis that simultaneously captures the overall scene structure and high-definition details within a single NeRF model.
+        </p>
+      </div>
+    </div>
+    <br>
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="static/images/teazer.png" alt="Paper Preview" 
+           style="width: 100%; max-width: 1400px; height: auto;">
+    </div>
+
+
+
+  </div>
+</section>
+
+
+
 <!-- Teaser video-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
+  <div class="container" style="max-width: 100vw; padding: 0; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+    <div class="has-text-centered" style="margin-bottom: 0; padding-bottom: 0;">
+      <div class="content has-text-justified">
+        <!-- <div class="content" style="text-align: center; color: #A0A0A0; font-size: 1.2em; text-align: center;"></div> -->
+        <p style="font-size: 1.2em; color: #747272; text-align: center; margin: 0 auto;">
+          <br><br>
+          Real-time rendering and roaming, observing the overall scene structure and fine details.
+        </p>
+      </div>
+    </div>
+    <div class="hero-body" style="padding-top: 0; margin-top: 0; display: flex; justify-content: center;">
+      <video poster="" id="tree" autoplay controls muted loop 
+        style="width: 90%; max-width: 1800px; height: auto;">
+        <source src="static/videos/scene2.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+
+
     </div>
   </div>
 </section>
 <!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
+
+
+
+<!-- Paper abstract with PDF -->
+<section class="section hero is-light" style="background: linear-gradient(to bottom, #fffdfd00, #fffffeab);">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
+
+    <!-- Abstract 文字部分 -->
+    <div class="has-text-left">
+      <h2 class="title is-3">Overview</h2>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="static/images/pip1_0305_fanail.jpg" alt="Paper Preview" 
+             style="width: 100%; max-width: 1400px; height: auto;">
+      </div>
+      <div class="content has-text-justified">
+        <div style="display: flex; justify-content: center; align-items: center;"></div>
+        <p style="font-size: 1.0em; margin: 0 auto;width: 100%; max-width: 1400px; height: auto;">
+          &nbsp;&nbsp;&nbsp;&nbsp;We propose a 3D frequency quantification method that analyzes the scene’s frequency distribution, enabling frequency-aware rendering. Our framework incorporates a frequency grid for fast convergence and querying, a frequency-aware feature re-weighting strategy to balance features across different frequency contents.
+        </p>
+      </div>
       </div>
     </div>
+    <br>
   </div>
 </section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
 
 
 
@@ -209,7 +374,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
-          <div class="publication-video">
+          <div class="Overview-video">
             <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
@@ -219,59 +384,6 @@
   </div>
 </section>
 <!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 <!--BibTex citation -->
